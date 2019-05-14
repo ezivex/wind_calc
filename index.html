@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+           <span class="opbtn" id="op" onclick="openNav()">&#9776;</span>
+        <aside class="nav sidenav" id="mySidenav">
+           <a href="javascript:void(0)" id="cls" class="closebtn" onclick="closeNav()">&times;</a>
+            <h2>Kalkulator</h2>
+            <ul>
+                <li><i class="fas fa-calculator"></i><span class="men">Standardowy</span> </li>
+                <li><i class="fas fa-flask"></i><span class="men">Naukowy</span></li>
+                <li><i class="fas fa-code"></i><span class="men">Programisty</span></li>
+                <li><i class="far fa-calendar-alt"></i><span class="men">Obliczanie daty</span></li>
+            </ul>
+            <h2>Konwerter</h2>
+            <ul>
+                <li><i class="fas fa-euro-sign"></i><span class="men">Waluta</span></li>
+                <li><i class="fas fa-cube"></i><span class="men">Objętość</span></li>
+                <li><i class="fas fa-ruler"></i><span class="men">Długość</span></li>
+                <li><i class="fas fa-balance-scale"></i><span class="men">Ciężar i masa</span></li>
+                <li><i class="fas fa-thermometer-half"></i><span class="men">Temperatura</span></li>
+                <li><i class="fas fa-fire-alt"></i><span class="men">Energia</span></li>
+                <li><i class="fas fa-th-large"></i><span class="men">Powierzchnia</span></li>
+                <li><i class="fas fa-running"></i><span class="men">Prędkość</span></li>
+                <li><i class="far fa-clock"></i><span class="men">Czas</span></li>
+                <li><i class="fas fa-bolt"></i><span class="men">Moc</span></li>
+                <li><i class="fas fa-inbox"></i><span class="men">Dane</span></li>
+                <li><i class="fas fa-tachometer-alt"></i><span class="men">Ciśnienie</span></li>
+                <li><i class="fas fa-ruler-combined"></i><span class="men">Kąt</span></li>
+            </ul>
+            <ul>
+                <li><i class="fas fa-info-circle"></i><span class="men">Informacje</span></li>
+            </ul>
+        </aside>
+        <main class="calc">
+            <div class="show">
+                <input id="result" class="sho" type="text">
+            </div>
+            <div class="nested">
+                <div class="math_item item--prc hov" onclick="num()"><i class="fas fa-percent"></i></div>
+                <div class="math_item item--ce hov" onclick="reset()"><span>CE</span></div>
+                <div class="math_item item--c hov" onclick="num()"><span>C</span></div>
+                <div class="math_item item--del hov" onclick="backspace()"><i class="fas fa-backspace"></i></div>
+                <div class="math_item item--divide hov" onclick="divide()"><i class="fas fa-divide"></i></div>
+                <div class="math_item item--root hov" onclick="pierwiastek()"><i class="fas fa-square-root-alt"></i></div>
+                <div class="math_item item--sev hov" onclick="num()" id="7"><span>7</span></div>
+                <div class="math_item item--eig hov" onclick="num()" id="8"><span>8</span></div>
+                <div class="math_item item--nine hov" onclick="num()" id="9"><span>9</span></div>
+                <div class="math_item item--mult hov" onclick="razy()"><i class="fas fa-times"></i></div>
+                <div class="math_item item--pow2 hov" onclick="szescian()"> <i class="fas fa-superscript"></i></div>
+                <div class="math_item item--four hov" onclick="num()" id="4"><span>4</span></div>
+                <div class="math_item item--fiv hov" onclick="num()" id="5"><span>5</span></div>
+                <div class="math_item item--six hov" onclick="num()" id="6"><span>6</span></div>
+                <div class="math_item item--minus hov" onclick="minus()"><i class="fas fa-minus"></i></div>
+                <div class="math_item item--pow3 hov" onclick="kwadrat()"><i class="fas fa-superscript"></i></div>
+                <div id="one" data-value="1" class="math_item item--one hov" onclick="num()" id="1"><span>1</span></div>
+                <div class="math_item item--two hov" onclick="num()" id="2"><span>2</span></div>
+                <div class="math_item item--three hov" onclick="num()" id="3"><span>3</span></div>
+                <div class="math_item item--plus hov" onclick="plus()"><i class="fas fa-plus"></i></div>
+                <div class="math_item item--ul hov" onclick="ulamenk()"><span>1/x</span></div>
+                <div class="math_item item--plsmin hov" onclick="zmiana()"><i class="fas fa-plus"></i><span> / </span><i class="fas fa-minus"></i></div>
+                <div class="math_item item--zero hov" onclick="num()" id="0"><span>0</span></div>
+                <div class="math_item item--dot hov" onclick="num()"><span>,</span></div>
+                <div class="math_item item--eql hov" onclick="equals()"><i class="fas fa-equals"></i></div>
+            </div>
+        </main>
+        <div class="math_cache">
+           
+   
+           
+           
+        </div>
+    </div>
+    <div id="a"></div>
+    <script>
+    
+function openNav() {
+  document.getElementById("mySidenav").style.width = "15vw";
+    document.getElementById("op").style.display = "none";
+   document.getElementById("cls").style.display = "block";
+
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+   document.getElementById("cls").style.display = "none";
+
+ document.getElementById("op").style.display = "block";
+}
+
+let num1="";
+let num2="";
+let znak=false;
+let dzialanie="";
+let wart="";        
+
+function num(){
+       if(znak==true)
+           {
+            num2+="1";
+            document.getElementById("result").value = wart+num2;
+           }
+    else
+        {
+            num1+="1";
+            document.getElementById("result").value = num1;
+        }
+}        
+function plus(){
+    znak=true;
+    document.getElementById("result").value += "+";
+    wart=document.getElementById("result").value;
+    dzialanie="+";
+}
+        
+function equals(){
+    let wynik=0;
+    switch(dzialanie){
+        case "+":
+        wynik=parseInt(num1)+parseInt(num2);
+        break;
+        case "-":
+        wynik=parseInt(num1)-parseInt(num2);
+        break;
+    }
+    document.getElementById("result").value=wynik;
+}        
+        
+</script>
+</body></html>
