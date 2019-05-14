@@ -129,8 +129,9 @@ ul li:hover {
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.4em;
   width: 50%;
+  color: #000;
 }
 .calculator__mathCache__button--tablink:active {
  border-bottom: .6vh solid hsl(207, 100%, 42%);
@@ -139,16 +140,54 @@ ul li:hover {
 .calculator__mathCache--tab{
     margin-top: 4vh;
     width: 30vh;
+   
 }
 calculator__mathCache__tab--content{
   width: 30vw;
   display: none;
   height: 30vh;
   margin-top: 1vh;
+
 }
 .calculator__mathCache__cache__h,
 .calculator__mathCache__cache__p{
    margin-top: 1vh;
     margin-left: 1vh;
 }
-
+.calculator__mathCache__cache__p{
+    text-align: right;
+    width: 20vw;
+    font-size: 1.5em;
+     overflow-y: scroll;
+    height: 65vh;
+}
+::-webkit-scrollbar {
+ display: none;
+}
+.calculator__mathCache__cache__trash{
+    font-size: 2em;
+    z-index: 999;
+    position: absolute;
+    left: 96vw;
+    top: 74vh;
+    padding: .4vh;
+}
+.calculator__mathCache__cache__trash:hover{
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 97%, 0.47);
+    background-color: hsla(0, 2%, 60%, 0.28);
+    
+}
+.demo{
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.96);
+    border: 1px solid hsla(0, 0%, 62%, 0.76);
+    top: 78vh;
+    left: .5vw;
+    width: 58vh;
+    height: 25vh;
+    display: none;
+}
+.popup-p{
+    margin-left: 3vw;
+}

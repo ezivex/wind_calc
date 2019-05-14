@@ -41,7 +41,8 @@
                 <li><i class="fas fa-ruler-combined"></i><span class="nav__li--size">Kąt</span></li>
             </ul>
             <ul>
-                <li><i class="fas fa-info-circle"></i><span class="nav__li--size">Informacje</span></li>
+                <li id="popup"><i class="fas fa-info-circle"></i><span class="nav__li--size">Informacje</span></li>
+                <div  class="demo"id="demo"></div>
             </ul>
         </aside>
         <main class="calculator">
@@ -89,6 +90,7 @@
             <div id="History" class="calculator__mathCache__tab--content">
                 <h3 class="calculator__mathCache__cache__h">History</h3>
                 <p class="calculator__mathCache__cache__p" id="historia">No history yet.</p>
+                <i class="far fa-trash-alt  calculator__mathCache__cache__trash"></i>
             </div>
 
             <div id="Cache" class="calculator__mathCache__tab--content">
@@ -98,6 +100,7 @@
 
     </div>
         </div>
+        
     </div>
     <script>
         /*------------------------------ navigation ------------------------------*/
@@ -172,5 +175,13 @@ document.getElementById("defaultOpen").click();
         function ulamek(){
             
         }
+        
+/*------------------------------------------*/     
+document.getElementById("popup").onclick = displayInfo;
+
+function displayInfo() {
+    document.getElementById("demo").innerHTML = '<h2>Informacje</h2><p class="popup-p">lorrem ipsum dolo</p><p class="popup-p">lorrem ipsum dolo</p>';
+document.getElementById("demo").style.display = "block";
+}
     </script>
 </body></html>
