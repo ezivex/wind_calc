@@ -68,6 +68,7 @@ document.getElementById("defaultOpen").click();
         }
         function historia_clear(){
             document.getElementById("historia").innerHTML="No history yet.";
+            his=0;    
         }
         
         function reset_ce(){
