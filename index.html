@@ -49,34 +49,34 @@
                 <input id="result" class="show__input--result " disabled type="text">
             </div>
             <div class="calculator__buttons">
-                <div class="calculator__button--mathItem item--prc calculator__button--mathItem--hover" onclick="num()"><i class="fas fa-percent"></i></div>
+                <div class="calculator__button--mathItem item--prc calculator__button--mathItem--hover" onclick="procent()"><i class="fas fa-percent"></i></div>
                 <div class="calculator__button--mathItem item--ce calculator__button--mathItem--hover" onclick="reset()"><span>CE</span></div>
-                <div class="calculator__button--mathItem item--c calculator__button--mathItem--hover" onclick="num()"><span>C</span></div>
+                <div class="calculator__button--mathItem item--c calculator__button--mathItem--hover" onclick="reset()"><span>C</span></div>
                 <div class="calculator__button--mathItem item--del calculator__button--mathItem--hover" onclick="backspace()"><i class="fas fa-backspace"></i></div>
-                <div class="calculator__button--mathItem item--divide calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="divide()"><i class="fas fa-divide"></i></div>
+                <div class="calculator__button--mathItem item--divide calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="num('/')"><i class="fas fa-divide"></i></div>
 
                 <div class="calculator__button--mathItem item--root calculator__button--mathItem--hover" onclick="pierwiastek()"><i class="fas fa-square-root-alt"></i></div>
-                <div class="calculator__button--mathItem item--sev calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="7"><span>7</span></div>
-                <div class="calculator__button--mathItem item--eig calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="8"><span>8</span></div>
-                <div class="calculator__button--mathItem item--nine calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="9"><span>9</span></div>
-                <div class="calculator__button--mathItem item--mult calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="razy()"><i class="fas fa-times"></i></div>
+                <div class="calculator__button--mathItem item--sev calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('7')" id="7"><span>7</span></div>
+                <div class="calculator__button--mathItem item--eig calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('8')" id="8"><span>8</span></div>
+                <div class="calculator__button--mathItem item--nine calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('9')" id="9"><span>9</span></div>
+                <div class="calculator__button--mathItem item--mult calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="num('*')"><i class="fas fa-times"></i></div>
 
                 <div class="calculator__button--mathItem item--pow2 calculator__button--mathItem--hover" onclick="szescian()"> <i class="fas fa-superscript"></i></div>
-                <div class="calculator__button--mathItem item--four calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="4"><span>4</span></div>
-                <div class="calculator__button--mathItem item--fiv calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="5"><span>5</span></div>
-                <div class="calculator__button--mathItem item--six calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="6"><span>6</span></div>
-                <div class="calculator__button--mathItem item--minus calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="minus()"><i class="fas fa-minus"></i></div>
+                <div class="calculator__button--mathItem item--four calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('4')" id="4"><span>4</span></div>
+                <div class="calculator__button--mathItem item--fiv calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('5')" id="5"><span>5</span></div>
+                <div class="calculator__button--mathItem item--six calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('6')" id="6"><span>6</span></div>
+                <div class="calculator__button--mathItem item--minus calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="num('-')"><i class="fas fa-minus"></i></div>
 
                 <div class="calculator__button--mathItem item--pow3 calculator__button--mathItem--hover" onclick="kwadrat()"><i class="fas fa-superscript"></i></div>
-                <div class="calculator__button--mathItem item--one calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="1"><span>1</span></div>
-                <div class="calculator__button--mathItem item--two calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="2"><span>2</span></div>
-                <div class="calculator__button--mathItem item--three calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="3"><span>3</span></div>
-                <div class="calculator__button--mathItem item--plus calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="plus()"><i class="fas fa-plus"></i></div>
+                <div class="calculator__button--mathItem item--one calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('1')" id="1"><span>1</span></div>
+                <div class="calculator__button--mathItem item--two calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('2')" id="2"><span>2</span></div>
+                <div class="calculator__button--mathItem item--three calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('3')" id="3"><span>3</span></div>
+                <div class="calculator__button--mathItem item--plus calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="num('+')"><i class="fas fa-plus"></i></div>
 
-                <div class="calculator__button--mathItem item--ul calculator__button--mathItem--hover" onclick="ulamenk()"><span>1/x</span></div>
+                <div class="calculator__button--mathItem item--ul calculator__button--mathItem--hover" onclick="ulamek()"><span>1/x</span></div>
                 <div class="calculator__button--mathItem item--plsmin calculator__button--mathItem--hover" onclick="zmiana()"><i class="fas fa-plus"></i><span> / </span><i class="fas fa-minus"></i></div>
-                <div class="calculator__button--mathItem item--zero calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num()" id="0"><span>0</span></div>
-                <div class="calculator__button--mathItem item--dot calculator__button--mathItem--hover" onclick="num()"><span>,</span></div>
+                <div class="calculator__button--mathItem item--zero calculator__button--mathItem--number calculator__button--mathItem--hover" onclick="num('0')" id="0"><span>0</span></div>
+                <div class="calculator__button--mathItem item--dot calculator__button--mathItem--hover" onclick="num(',')"><span>,</span></div>
                 <div class="calculator__button--mathItem item--eql calculator__button--mathItem--basicMathAction calculator__button--mathItem--hover" onclick="equals()"><i class="fas fa-equals"></i></div>
 
             </div>
@@ -88,7 +88,7 @@
     <div class="calculator__mathCache--tab">
             <div id="History" class="calculator__mathCache__tab--content">
                 <h3 class="calculator__mathCache__cache__h">History</h3>
-                <p class="calculator__mathCache__cache__p">No history yet.</p>
+                <p class="calculator__mathCache__cache__p" id="historia">No history yet.</p>
             </div>
 
             <div id="Cache" class="calculator__mathCache__tab--content">
@@ -131,40 +131,46 @@
 document.getElementById("defaultOpen").click();
 
         /*----------------------------- calc function -----------------------------*/
-        let num1 = "";
-        let num2 = "";
-        let znak = false;
-        let dzialanie = "";
-        let wart = "";
-
-        function num() {
-            if (znak == true) {
-                num2 += "1";
-                document.getElementById("result").value = wart + num2;
-            } else {
-                num1 += "1";
-                document.getElementById("result").value = num1;
-            }
-        }
-
-        function plus() {
-            znak = true;
-            document.getElementById("result").value += "+";
-            wart = document.getElementById("result").value;
-            dzialanie = "+";
+        let his=0;
+        
+        function num(x) {
+           document.getElementById("result").value += x;
         }
 
         function equals() {
-            let wynik = 0;
-            switch (dzialanie) {
-                case "+":
-                    wynik = parseInt(num1) + parseInt(num2);
-                    break;
-                case "-":
-                    wynik = parseInt(num1) - parseInt(num2);
-                    break;
-            }
-            document.getElementById("result").value = wynik;
+           let wynik=document.getElementById("result").value;
+            historia();
+            document.getElementById("result").value = eval(wynik);
+        }
+        
+        function historia(){
+            let dzialanie=document.getElementById("result").value;
+            if(his==0)
+                {
+                    document.getElementById("historia").innerHTML=dzialanie+"= <br>"+eval(dzialanie)+"<br>";
+                    his++;
+                }
+            else
+                {
+                    document.getElementById("historia").innerHTML+=dzialanie+"= <br>"+eval(dzialanie)+"<br>";
+                }
+        }
+        
+        function reset(){
+            document.getElementById("result").value = "";
+        }
+        
+        function backspace(){
+            let wynik=document.getElementById("result").value;
+            document.getElementById("result").value="";
+            for(let i=0;i<wynik.length-1;i++)
+                {
+                    document.getElementById("result").value+=wynik.charAt(i);
+                }
+        }
+        
+        function ulamek(){
+            
         }
     </script>
 </body></html>
