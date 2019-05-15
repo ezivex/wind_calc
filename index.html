@@ -41,8 +41,12 @@
                 <li><i class="fas fa-ruler-combined"></i><span class="nav__li--size">Kąt</span></li>
             </ul>
             <ul>
-                <li id="popup"><i class="fas fa-info-circle"></i><span class="nav__li--size">Informacje</span></li>
-                <div  class="demo"id="demo"></div>
+                <li id="popup"><i class="fas fa-info-circle"></i><span class="nav__li--size" onclick="displayInfo()">Informacje</span></li>
+                <div  class="info d-none"id="info">
+					<h2>Informacje</h2>
+					<p class="popup-p">lorrem ipsum dolo</p>
+					<p class="popup-p">lorrem ipsum dolo</p>
+				</div>
             </ul>
         </aside>
         <main class="calculator">

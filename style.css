@@ -178,7 +178,7 @@ calculator__mathCache__tab--content{
     background-color: hsla(0, 2%, 60%, 0.28);
     
 }
-.demo{
+.info{
     position: absolute;
     background-color: hsla(0, 0%, 100%, 0.96);
     border: 1px solid hsla(0, 0%, 62%, 0.76);
@@ -186,8 +186,13 @@ calculator__mathCache__tab--content{
     left: .5vw;
     width: 58vh;
     height: 25vh;
-    display: none;
 }
 .popup-p{
     margin-left: 3vw;
 }
+.d-none{
+display:none;	
+}
+.d-block{
+display:block;
+}	

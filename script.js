@@ -173,9 +173,17 @@ document.getElementById("defaultOpen").click();
         }
 
 /*------------------------------------------*/     
-document.getElementById("popup").onclick = displayInfo;
-
+let info_check=0;
 function displayInfo() {
-    document.getElementById("demo").innerHTML = '<h2>Informacje</h2><p class="popup-p">lorrem ipsum dolo</p><p class="popup-p">lorrem ipsum dolo</p>';
-document.getElementById("demo").style.display = "block";
+	if(info_check==0 || info_check%2==0)
+	{
+		document.getElementById("info").classList.remove("d-none");
+		document.getElementById("info").classList.add("d-block");
+	}
+	else
+	{
+		document.getElementById("info").classList.remove("d-block");
+		document.getElementById("info").classList.add("d-none");		
+	}
+info_check++;
 }
