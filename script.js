@@ -30,16 +30,19 @@ document.getElementById("defaultOpen").click();
 
 /*----------------------------- calc function -----------------------------*/
 let his = 0;
+let clear=false;
 
 function num(x) {
     let wynik = document.getElementById("result").value;
     let wynik1 = document.getElementById("result1").value;
+    num_check();
     if (x == "+" || x == "-" || x == "*" || x == "/") {
         document.getElementById("result1").value = wynik + x;
         reset_ce();
     } else {
         document.getElementById("result").value += x;
     }
+    comma_check();
 }
 
 function equals() {
@@ -49,6 +52,7 @@ function equals() {
     historia();
     document.getElementById("result").value = eval(wynik);
     document.getElementById("result1").value = "";
+    clear=true;
 }
 
 function historia() {
@@ -99,12 +103,12 @@ function square_root() {
     let war = document.getElementById("result").value;
     document.getElementById("result1").value = "√" + "(" + war + ")";
     let dzialanie = document.getElementById("result1").value;
-    document.getElementById("result").value = (Math.sqrt(war));
+    document.getElementById("result").value = (Math.round(Math.sqrt(war)));
     if (his == 0) {
-        document.getElementById("historia").innerHTML = dzialanie + "= <br>" + (Math.sqrt(war)) + "<br>";
+        document.getElementById("historia").innerHTML = dzialanie + "= <br>" + (Math.round(Math.sqrt(war))) + "<br>";
         his++;
     } else {
-        document.getElementById("historia").innerHTML += dzialanie + "= <br>" + (Math.sqrt(war)) + "<br>";
+        document.getElementById("historia").innerHTML += dzialanie + "= <br>" + (Math.round(Math.sqrt(war))) + "<br>";
     }
 }
 
@@ -114,10 +118,10 @@ function square() {
     let dzialanie = document.getElementById("result1").value;
     document.getElementById("result").value = (war * war);
     if (his == 0) {
-        document.getElementById("historia").innerHTML = dzialanie + "= <br>" + (war * war) + "<br>";
+        document.getElementById("historia").innerHTML = dzialanie + "= <br>" + (Math.round(war * war)) + "<br>";
         his++;
     } else {
-        document.getElementById("historia").innerHTML += dzialanie + "= <br>" + (war * war) + "<br>";
+        document.getElementById("historia").innerHTML += dzialanie + "= <br>" + (Math.round(war * war)) + "<br>";
     }
 }
 
@@ -162,4 +166,27 @@ function displayInfo() {
         document.getElementById("info").classList.add("d-none");
     }
     info_check++;
+}
+
+function num_check() {
+    if (clear==true) {
+        reset_c();
+    } 
+    clear=false;
+}
+
+function comma_check(){
+    let wynik = document.getElementById("result").value;
+    let check=0;
+    
+     for (let i = 1; i < wynik.length; i++) {
+            if (wynik.charAt(i) == ".") {
+                check++;
+            } 
+        }
+    if(check>1)
+        {
+            backspace();
+        }
+    check=0;
 }
