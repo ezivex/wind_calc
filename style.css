@@ -83,6 +83,17 @@ user-select: none;
     border: none;
 }
 
+.show__input--result1 {
+    width: 100%;
+    height: 16vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: right;
+    font-size: 5em;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+}
+
 .calculator__button--mathItem {
     height: 10vh;
     font-size: 3em;
@@ -237,5 +248,74 @@ calculator__mathCache__tab--content {
 
 .d-block {
     display: block;
+}
+@media (min-width:320px) and (max-width:961px)  { 
+    .container {
+    height: 75vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 2;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "as cl"
+} 
+.calculator__mathCache {
+    display: none;
+}
+
+.calculator__button--mathItem {
+    height: 7vh;
+    font-size: 1.6em;
+    line-height: 7vh;
+    text-align: center;
+    background-color: hsla(0, 0%, 97%, 0.47);
+}
+    .calculator {
+    margin-right: 4vw;
+  
+}   
+
+.nav__button--open {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    font-size: 3em;
+    color: hsl(0, 0%, 4%);
+    cursor: pointer;
+    transition: 3.5s;
+}
+
+.nav__button--close {
+    position: absolute;
+    top: 1vh;
+    width: 2vw;
+    margin-bottom: 1vh;
+    margin-left: 12.4vw;
+    font-size: 3.2em;
+    text-align: center;
+    color: hsl(0, 0%, 4%);
+}
+
+    
+.show__input--result1 {
+    width: 100%;
+    height: 4vh;
+    margin-top: 9vh;
+    text-align: right;
+    font-size: 2em;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+}
+    .show__input--result {
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 1vh;
+    text-align: right;
+    font-size: 3em;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+}
+
+
 }
 
