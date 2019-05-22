@@ -1,17 +1,21 @@
 /*------------------------------ navigation ------------------------------*/
 function openNav() {
-    document.getElementById("mySidenav").style.width = "15vw";
     document.getElementById("op").style.display = "none";
     document.getElementById("cls").style.display = "block";
-
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
     document.getElementById("cls").style.display = "none";
-
     document.getElementById("op").style.display = "block";
 }
+
+$("#op").click(function() {
+  $( "#mySidenav" ).show( "slow" );
+});
+$("#cls").click(function() {
+  $( "#mySidenav" ).hide( "slow" );
+});
+
 /*-------------------------------------------------------------------------*/
 
 function openPage(pageName, elmnt) {
@@ -196,20 +200,7 @@ function change() {
 
 /*------------------------------------------*/
 
-/*-------------Check Functions--------------*/
-let info_check = 0;
-
-function displayInfo() {
-    if (info_check == 0 || info_check % 2 == 0) {
-        document.getElementById("info").classList.remove("d-none");
-        document.getElementById("info").classList.add("d-block");
-    } else {
-        document.getElementById("info").classList.remove("d-block");
-        document.getElementById("info").classList.add("d-none");
-    }
-    info_check++;
-}
-
+/*------------ Check Functions -------------*/
 function num_check() {
     if (clear==true) {
         reset_c();

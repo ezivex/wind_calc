@@ -32,7 +32,8 @@ user-select: none;
 
 .nav--sidenav {
     overflow-x: hidden;
-    width: 0;
+    width: 15vw;
+	display: none;
 }
 
 .nav__button--open {
@@ -233,6 +234,7 @@ calculator__mathCache__tab--content {
     left: .5vw;
     width: 58vh;
     height: 29vh;
+	display: none;
 }
 
 .nav__popup_p {
@@ -242,13 +244,6 @@ calculator__mathCache__tab--content {
     margin-bottom: 3vh;
 }
 
-.d-none {
-    display: none;
-}
-
-.d-block {
-    display: block;
-}
 @media (min-width:320px) and (max-width:961px)  { 
     .container {
     height: 75vh;
