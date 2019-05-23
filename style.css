@@ -106,7 +106,7 @@ body {
 
 .calculator__button--mathItem {
     height: 10vh;
-    font-size: 3em;
+    font-size: 1.4em;
     line-height: 10vh;
     text-align: center;
     background-color: hsla(0, 0%, 97%, 0.47);
@@ -114,6 +114,7 @@ body {
 
 .calculator__button--mathItem--number {
     background-color: hsl(0, 0%, 100%);
+    font-weight: bold;
 }
 
 .calculator__button--mathItem--hover:hover {
@@ -124,7 +125,7 @@ body {
     box-shadow: 2px -1px 12px -3px hsla(0, 0%, 0%, 0.75);
 }
 
-.calculator__button--mathItem--basicMathAction:hover {
+.calculator__button--mathItem--basicMathAction:hover, .calculator__button--mathItem--basicMathAction:active {
     color: hsl(0, 0%, 100%);
     background-color: hsl(207, 100%, 42%);
 }
@@ -266,7 +267,11 @@ calculator__mathCache__tab--content {
     margin-right: 4vw;
     margin-left: 4vw;
   
-}   
+}  
+    .calculator__button--mathItem--number {
+    background-color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}  
 
 .nav__button--open {
     position: absolute;
