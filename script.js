@@ -1,19 +1,22 @@
 /*------------------------------ navigation ------------------------------*/
-function openNav() {
-    document.getElementById("op").style.display = "none";
-    document.getElementById("cls").style.display = "block";
-}
-
-function closeNav() {
-    document.getElementById("cls").style.display = "none";
-    document.getElementById("op").style.display = "block";
-}
-
 $("#op").click(function() {
-  $( "#mySidenav" ).show( "slow" );
+    $( "#op" ).hide( "fast" );
+    $( "#mySidenav" ).delay(30).show( "slow" );
+    $( "#cls" ).delay(70).show( "slow" );
 });
 $("#cls").click(function() {
-  $( "#mySidenav" ).hide( "slow" );
+    $( "#mySidenav" ).hide( "slow" );
+    $( "#op" ).show( "slow" ); 
+    $( "#cls" ).hide( "fast" );
+});
+
+$(window).load(function () {
+    $("#popup").click(function(){
+       $('.popup').show("slow");
+    });
+    $('.popup').click(function(){
+        $('.popup').hide("slow");
+    });
 });
 
 /*-------------------------------------------------------------------------*/

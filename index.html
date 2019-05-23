@@ -16,9 +16,9 @@
 
 <body>
     <div class="container">
-        <span class="nav__button--open" id="op" onclick="openNav()">&#9776;</span>
+        <span class="nav__button--open" id="op">&#9776;</span>
         <aside class="nav nav--sidenav" id="mySidenav">
-            <a href="javascript:void(0)" id="cls" class="nav__button--close" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" id="cls" class="nav__button--close">&times;</a>
             <h2>Kalkulator</h2>
             <ul>
                 <li><i class="fas fa-calculator"></i><span class="nav__li--size">Standardowy</span> </li>
@@ -43,15 +43,17 @@
                 <li><i class="fas fa-ruler-combined"></i><span class="nav__li--size">Kąt</span></li>
             </ul>
             <ul>
-                <li id="popup" class="MobileNone"><i class="fas fa-info-circle"></i><span class="nav__li--size" onclick="displayInfo()">Informacje</span></li>
-                
-                <li class="nav__popup--infoMobile DesktopNone"><h2>Informacje</h2>
+                <li id="popup" class="MobileNone"><i class="fas fa-info-circle"></i><span class="nav__li--size">Informacje</span></li>
+                <div class="popup">
+                <div>
+                <h2>Informacje</h2>
                 <h3>Autorzy:</h3>
                  <p>Łukasz Strzałek<br>
                         Adam Geppert</p>
                 <a target="_blank" href="https://github.com/ezivex/wind_calc"><i class="fab fa-github fa--marg fa-2x"></i></a>
                 <p>&copy; 2019 Wszelkie prawa zastrzeżone.</p>
-                </li>
+                </div>
+                </div>
                 
                 <div class="nav__popup__info" id="info">
                     <h2>Informacje</h2>
