@@ -270,7 +270,7 @@ calculator__mathCache__tab--content {
 
 .nav__button--open {
     position: absolute;
-    top: 1vh;
+    top: 2vh;
     left: 1vw;
     font-size: 3em;
     color: hsl(0, 0%, 4%);
@@ -281,6 +281,7 @@ calculator__mathCache__tab--content {
 .nav__button--close {
     position: absolute;
     top: 1vh;
+     left: 70vw;
     width: 2vw;
     margin-bottom: 1vh;
     margin-left: 12.4vw;
@@ -322,19 +323,18 @@ calculator__mathCache__tab--content {
     .MobileNone{
         display: none;
     }
-    span{
-        margin-left: 3vw;
-    }
+
  li {
     display: block;
     margin-left: 1vh;
      margin-bottom: 3vh;
 }
     .nav__li--size {
-    width: 45vw;
+    width: 53vw;
     text-align: center;
     }
     .fa--marg{
         margin-right: 6vw;
     }
+
 }
