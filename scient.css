@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: hsl(0, 0%, 0%);
+    background-image: linear-gradient(-160deg, hsl(0, 0%, 92%) 1%, hsl(0, 0%, 74%) 170%);
+    
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -ms-overflow-style:none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.container {
+    height: 120vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 12;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "as cl cl cl cl cl cl ch ch ch ch ch"
+}
+
+/*-------------------------------navigation--------------------------*/
+.nav__li--size {
+    display: inline-block;
+    margin-left: 1vh;
+}
+
+.nav--sidenav {
+    overflow-x: hidden;
+    width: 15vw;
+	display: none;
+}
+
+.nav__button--open {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    font-size: 3em;
+    color: hsl(0, 0%, 4%);
+    cursor: pointer;
+    transition: 3.5s;
+}
+
+.nav__button--close {
+    position: absolute;
+    top: 1vh;
+    width: 2vw;
+    margin-bottom: 1vh;
+    margin-left: 12.4vw;
+    font-size: 3.2em;
+    text-align: center;
+    color: hsl(0, 0%, 4%);
+}
+
+.nav__popup__info {
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.96);
+    border: 1px solid hsla(0, 0%, 62%, 0.76);
+    top: 78vh;
+    left: .5vw;
+    width: 58vh;
+    height: 29vh;
+	display: none;
+}
+
+.nav__popup_p {
+    margin-left: 3vw;
+}
+.nav__popup_pLast--marg {
+    margin-bottom: 3vh;
+}
+/*----------------------------calculator-----------------------------*/
+.calculator {
+    grid-area: cl;
+    margin-left: 1vw;
+}
+
+.calculator__mathCache {
+    grid-area: ch;
+    margin-left: 1vw;
+}
+
+.calculator__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1vh;
+}
+
+.calculator__show__input--resultDesktop {
+    width: 100%;
+    height: 16vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: right;
+    font-size: 5em;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+}
+
+
+.calculator__button--mathItem {
+    height: 10vh;
+    font-size: 1.5em;
+    line-height: 10vh;
+    text-align: center;
+    background-color: hsla(0, 0%, 97%, 0.47);
+}
+
+.calculator__button--mathItem--number {
+    background-color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
+.calculator__button--mathItem--hover:hover {
+    cursor: pointer;
+    background-color: hsla(0, 1%, 46%, 0.28);
+    -webkit-box-shadow: 2px -1px 12px -3px hsla(0, 0%, 0%, 0.75);
+    -moz-box-shadow: 2px -1px 12px -3px hsla(0, 0%, 0%, 0.75);
+    box-shadow: 2px -1px 12px -3px hsla(0, 0%, 0%, 0.75);
+}
+
+.calculator__button--mathItem--basicMathAction:hover,
+.calculator__button--mathItem--basicMathAction:focus,
+.calculator__button--mathItem--basicMathAction:active {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(207, 100%, 42%);}
+/*-----------------------------html items----------------------------*/
+#cls {
+    display: none;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    grid-area: as;
+}
+
+aside {
+    margin-right: 2vh;
+    opacity: 0.8;
+}
+
+h2 {
+    margin-left: 0.4vw;
+    font-size: 2em;
+}
+
+i {
+    width: 3vh;
+    text-align: center;
+}
+
+ul {
+    padding: 0.6vw;
+}
+
+ul li {
+    margin-top: 1vh;
+    padding: .1vw;
+    font-size: 1.5em;
+    list-style: none;
+    color: hsl(0, 0%, 19%);
+}
+
+ul li:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 0%);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*-----------------------------tabs----------------------------*/
+.calculator__mathCache__button--tablink {
+    color: hsl(0, 0%, 100%);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    width: 50%;
+    color: #000;
+}
+
+.calculator__mathCache__button--tablink:active {
+    border-bottom: .6vh solid hsl(207, 100%, 42%);
+}
+
+.calculator__mathCache--tab {
+    margin-top: 4vh;
+    width: 38vh;
+
+}
+
+calculator__mathCache__tab--content {
+    width: 30vw;
+    display: none;
+    height: 40vh;
+    margin-top: 1vh;
+
+}
+
+.calculator__mathCache__cache__h,
+.calculator__mathCache__cache__p {
+    margin-top: 1vh;
+    margin-left: 1vh;
+}
+
+.calculator__mathCache__cache--p {
+    text-align: right;
+    width: 20vw;
+    font-size: 1.5em;
+    overflow-y: scroll;
+    height: 65vh;
+    scrollbar-width: none;
+}
+
+.calculator__mathCache__cache__trash {
+    font-size: 2em;
+    position: absolute;
+    left: 96vw;
+    top: 90vh;
+    padding: .4vh;
+}
+
+.calculator__mathCache__cache__trash:hover {
+    cursor: pointer;
+    border: 1px solid hsla(0, 0%, 97%, 0.47);
+    background-color: hsla(0, 2%, 60%, 0.28);
+
+}
+
+ .nav__popup--infoMobile{
+        display: none;
+    }
+
+/*--------------------MOBILE-----------------------------*/
+@media (min-width:320px) and (max-width:961px)  { 
+    .container {
+    height: 140vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 2;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "as cl"
+} 
+.calculator__mathCache {
+    display: none;
+}
+
+.calculator__button--mathItem {
+    height: 7vh;
+    font-size: 1.2em;
+    line-height: 7vh;
+    text-align: center;
+    background-color: hsla(0, 0%, 97%, 0.47);
+}
+    .calculator {
+    margin-top: 10vh;
+    margin-right: 4vw;
+    margin-left: 4vw;
+  
+} 
+    .calculator__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1vh;
+}
+
+
+.nav__button--open {
+    position: absolute;
+    top: 2vh;
+    left: 1vw;
+    font-size: 3em;
+    color: hsl(0, 0%, 4%);
+    cursor: pointer;
+    transition: 3.5s;
+}
+
+.nav__button--close {
+    position: absolute;
+    top: 1vh;
+     left: 70vw;
+    width: 2vw;
+    margin-bottom: 1vh;
+    margin-left: 12.4vw;
+    font-size: 3.2em;
+    text-align: center;
+    color: hsl(0, 0%, 4%);
+}
+
+.nav--sidenav {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+	display: none;
+    text-align: center;
+}    
+  
+.calculator__button--mathItem--number {
+    background-color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}  
+.calculator__show__input--resultOne {
+    width: 100%;
+    height: 4vh;
+    margin-top: 9vh;
+    text-align: right;
+    font-size: 2em;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+}
+    .calculator__show__input--resultTwo {
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 1vh;
+    text-align: right;
+    font-size: 3em;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+}
+    .nav__popup--infoMobile{
+        display: block;
+    }
+    .MobileNone{
+        display: none;
+    }
+
+ li {
+    display: block;
+    margin-left: 1vh;
+     margin-bottom: 3vh;
+}
+    .nav__li--size {
+    width: 53vw;
+    text-align: center;
+    }
+    .fa--marg{
+        margin-right: 6vw;
+    }
+    .item--x2 {order:1}
+    .item--xy {order:2} 
+    .item--sin {order:3} 
+    .item--cos {order:4} 
+    .item--tan {order:5} 
+    .item--sin1 {display: none } 
+    .item--cos1 {display: none } 
+    .item--tan1 {display: none } 
+    .item--yrx {display: none } 
+     .item--dms {display: none } 
+      .item--in {display: none }
+      .item--deg {display: none }
+      .item--ex {display: none }
+      .item--ul {display: none }
+      .item--x3 {display: none } 
+    .item--root {order:6} 
+    .item--10x {order:7} 
+    .item--log {order:8} 
+    .item--exp {order:9} 
+    .item--mod {order:10} 
+    .item--arrow {order:11} 
+    .item--ce {order:12}
+    .item--c {order:13} 
+    .item--del {order:14} 
+    .item--divide {order:15} 
+    .item--pi {order:16} 
+    .item--sev {order:17} 
+    .item--eig {order:18} 
+    .item--nine {order:19} 
+    .item--mult {order:20} 
+    .item--nii {order:21} 
+    .item--four {order:22} 
+    .item--fiv {order:23} 
+    .item--six {order:24} 
+    .item--minus {order:25} 
+    .item--plsmin {order:26} 
+    .item--one {order:27} 
+    .item--two {order:28} 
+    .item--three {order:29} 
+    .item--plus {order:30} 
+    .item--40 {order:31} 
+    .item--41 {order:32} 
+    .item--zero {order:33} 
+    .item--dot {order:34} 
+    .item--eql {order:35} 
+}
