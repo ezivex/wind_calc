@@ -41,22 +41,32 @@
                 <li><i class="fas fa-ruler-combined"></i><span class="nav__li--size">Kąt</span></li>
             </ul>
             <ul>
-                <li id="popup"><i class="fas fa-info-circle"></i><span class="nav__li--size" onclick="displayInfo()">Informacje</span></li>
-                <div  class="info"id="info">
-					<h2>Informacje</h2>
-					<p class="nav__popup_p">Autorzy:
-					</p>
-					<p class="nav__popup_p">Łukasz Strzałek<br>
-					Adam Geppert</p>
-						<p class="nav__popup_p">Github: <a target="_blank" href="https://github.com/ezivex/wind_calc">https://github.com/ezivex/wind_calc</a></p>
-						<p class="nav__popup_p nav__popup_p--marg">&copy; Wszelkie prawa zastrzeżone.</p>
-				</div>
+                <li id="popup" class="MobileNone"><i class="fas fa-info-circle"></i><span class="nav__li--size" onclick="displayInfo()">Informacje</span></li>
+                
+                <li class="nav__popup--infoMobile DesktopNone"><h2>Informacje</h2>
+                <h3>Autorzy:</h3>
+                 <p>Łukasz Strzałek<br>
+                        Adam Geppert</p>
+                <a target="_blank" href="https://github.com/ezivex/wind_calc"><i class="fab fa-github fa--marg fa-2x"></i></a>
+                <p>&copy; 2019 Wszelkie prawa zastrzeżone.</p>
+                </li>
+                
+                <div class="nav__popup__info" id="info">
+                    <h2>Informacje</h2>
+                    <p class="nav__popup_p">Autorzy:
+                    </p>
+                    <p class="nav__popup_p">Łukasz Strzałek<br>
+                        Adam Geppert</p>
+             <a target="_blank" href="https://github.com/ezivex/wind_calc"><i class="fab fa-github fa--marg fa-2x"></i></a>
+                    <p class="nav__popup_p nav__popup_pLast--marg">&copy; 2019 Wszelkie prawa zastrzeżone.</p>
+                </div>
             </ul>
         </aside>
         <main class="calculator">
             <div class="calculator__show">
-               <input id="result1" class="show__input--result1" disabled type="text" value="">
-                <input id="result" class="show__input--result " disabled type="text"value="0">
+                <input id="result1" class="calculator__show__input--resultOne calculator__show__input--resultDesktop" disabled type="text" value="">
+                <input id="result" class="calculator__show__input--resultTwo
+                calculator__show__input--resultDesktop " disabled type="text" value="0">
             </div>
             <div class="calculator__buttons">
                 <div class="calculator__button--mathItem item--prc calculator__button--mathItem--hover" onclick="procent()"><i class="fas fa-percent"></i></div>
@@ -91,26 +101,29 @@
 
             </div>
         </main>
+
         <div class="calculator__mathCache">
 
             <button class="calculator__mathCache__button--tablink" id="defaultOpen" onclick="openPage('History', this,)">History</button>
-            <button class="calculator__mathCache__button--tablink" onclick="openPage('Cache', this,)" >Cache</button>
-    <div class="calculator__mathCache--tab">
-            <div id="History" class="calculator__mathCache__tab--content">
-                <h3 class="calculator__mathCache__cache__h">History</h3>
-                <p class="calculator__mathCache__cache__p" id="historia">No history yet.</p>
-                <i class="far fa-trash-alt  calculator__mathCache__cache__trash" onclick="historia_clear()"></i>
-            </div>
+            <button class="calculator__mathCache__button--tablink" onclick="openPage('Cache', this,)">Cache</button>
+            <div class="calculator__mathCache--tab">
+                <div id="History" class="calculator__mathCache__tab--content">
+                    <h3 class="calculator__mathCache__cache__h">History</h3>
+                    <p class="calculator__mathCache__cache__p calculator__mathCache__cache--p" id="historia">No history yet.</p>
+                    <i class="far fa-trash-alt  calculator__mathCache__cache__trash" onclick="historia_clear()"></i>
+                </div>
 
-            <div id="Cache" class="calculator__mathCache__tab--content">
-                <h3 class="calculator__mathCache__cache__h">Cache</h3>
-                <p class="calculator__mathCache__cache__p">Nothing saved yet in memory.</p>
-            </div>
+                <div id="Cache" class="calculator__mathCache__tab--content">
+                    <h3 class="calculator__mathCache__cache__h">Cache</h3>
+                    <p class="calculator__mathCache__cache__p">Nothing saved yet in memory.</p>
+                </div>
 
-    </div>
+            </div>
         </div>
-        
+
     </div>
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="script.js" type="text/javascript"></script>
-</body></html>
+</body>
+
+</html>

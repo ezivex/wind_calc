@@ -6,12 +6,13 @@ body {
     color: hsl(0, 0%, 0%);
     background-image: linear-gradient(-160deg, hsl(0, 0%, 92%) 1%, hsl(0, 0%, 74%) 170%);
     
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -ms-overflow-style:none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .container {
@@ -57,9 +58,27 @@ user-select: none;
     color: hsl(0, 0%, 4%);
 }
 
+.nav__popup__info {
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.96);
+    border: 1px solid hsla(0, 0%, 62%, 0.76);
+    top: 78vh;
+    left: .5vw;
+    width: 58vh;
+    height: 29vh;
+	display: none;
+}
+
+.nav__popup_p {
+    margin-left: 3vw;
+}
+.nav__popup_pLast--marg {
+    margin-bottom: 3vh;
+}
 /*----------------------------calculator-----------------------------*/
 .calculator {
     grid-area: cl;
+    margin-left: 1vw;
 }
 
 .calculator__mathCache {
@@ -73,7 +92,7 @@ user-select: none;
     grid-gap: 1vh;
 }
 
-.show__input--result {
+.calculator__show__input--resultDesktop {
     width: 100%;
     height: 16vh;
     margin-top: 2vh;
@@ -84,16 +103,6 @@ user-select: none;
     border: none;
 }
 
-.show__input--result1 {
-    width: 100%;
-    height: 16vh;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    text-align: right;
-    font-size: 5em;
-    background-color: hsla(0, 0%, 100%, 0.04);
-    border: none;
-}
 
 .calculator__button--mathItem {
     height: 10vh;
@@ -166,7 +175,7 @@ ul li:hover {
     display: none;
 }
 
-/*tabs*/
+/*-----------------------------tabs----------------------------*/
 .calculator__mathCache__button--tablink {
     color: hsl(0, 0%, 100%);
     float: left;
@@ -202,14 +211,14 @@ calculator__mathCache__tab--content {
     margin-left: 1vh;
 }
 
-.calculator__mathCache__cache__p {
+.calculator__mathCache__cache--p {
     text-align: right;
     width: 20vw;
     font-size: 1.5em;
     overflow-y: scroll;
     height: 65vh;
+    scrollbar-width: none;
 }
-
 
 .calculator__mathCache__cache__trash {
     font-size: 2em;
@@ -226,27 +235,14 @@ calculator__mathCache__tab--content {
 
 }
 
-.info {
-    position: absolute;
-    background-color: hsla(0, 0%, 100%, 0.96);
-    border: 1px solid hsla(0, 0%, 62%, 0.76);
-    top: 78vh;
-    left: .5vw;
-    width: 58vh;
-    height: 29vh;
-	display: none;
-}
+ .nav__popup--infoMobile{
+        display: none;
+    }
 
-.nav__popup_p {
-    margin-left: 3vw;
-}
-.nav__popup_p--marg {
-    margin-bottom: 3vh;
-}
-
+/*--------------------MOBILE-----------------------------*/
 @media (min-width:320px) and (max-width:961px)  { 
     .container {
-    height: 75vh;
+    height: 100vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr, 2;
@@ -266,7 +262,9 @@ calculator__mathCache__tab--content {
     background-color: hsla(0, 0%, 97%, 0.47);
 }
     .calculator {
+    margin-top: 10vh;
     margin-right: 4vw;
+    margin-left: 4vw;
   
 }   
 
@@ -291,8 +289,16 @@ calculator__mathCache__tab--content {
     color: hsl(0, 0%, 4%);
 }
 
+.nav--sidenav {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+	display: none;
+    text-align: center;
+}    
+  
     
-.show__input--result1 {
+.calculator__show__input--resultOne {
     width: 100%;
     height: 4vh;
     margin-top: 9vh;
@@ -301,7 +307,7 @@ calculator__mathCache__tab--content {
     background-color: hsla(0, 0%, 100%, 0.04);
     border: none;
 }
-    .show__input--result {
+    .calculator__show__input--resultTwo {
     width: 100%;
     height: 8vh;
     margin-bottom: 1vh;
@@ -310,7 +316,25 @@ calculator__mathCache__tab--content {
     background-color: hsla(0, 0%, 100%, 0.04);
     border: none;
 }
-
-
+    .nav__popup--infoMobile{
+        display: block;
+    }
+    .MobileNone{
+        display: none;
+    }
+    span{
+        margin-left: 3vw;
+    }
+ li {
+    display: block;
+    margin-left: 1vh;
+     margin-bottom: 3vh;
 }
-
+    .nav__li--size {
+    width: 45vw;
+    text-align: center;
+    }
+    .fa--marg{
+        margin-right: 6vw;
+    }
+}
