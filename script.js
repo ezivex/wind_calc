@@ -42,7 +42,7 @@ function num(x) {
     num_check();
 	null_check(x);
     if (x == "+" || x == "-" || x == "*" || x == "/") {
-        document.getElementById("result1").value = wynik + x;
+        document.getElementById("result1").value += wynik + x;
         reset_ce();
     } else {
         document.getElementById("result").value += x;
