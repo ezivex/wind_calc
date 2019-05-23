@@ -257,7 +257,7 @@ calculator__mathCache__tab--content {
 
 .calculator__button--mathItem {
     height: 7vh;
-    font-size: 1.6em;
+    font-size: 1.4em;
     line-height: 7vh;
     text-align: center;
     background-color: hsla(0, 0%, 97%, 0.47);
