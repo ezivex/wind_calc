@@ -344,7 +344,7 @@ calculator__mathCache__tab--content {
     text-align: center;
     }
     .fa--marg{
-        margin-right: 6vw;
+        margin-right: 7vw;
     }
     .item--x2 {order:1}
     .item--xy {order:2} 
@@ -355,12 +355,12 @@ calculator__mathCache__tab--content {
     .item--cos1 {display: none } 
     .item--tan1 {display: none } 
     .item--yrx {display: none } 
-     .item--dms {display: none } 
-      .item--in {display: none }
-      .item--deg {display: none }
-      .item--ex {display: none }
-      .item--ul {display: none }
-      .item--x3 {display: none } 
+    .item--dms {display: none } 
+    .item--in {display: none }
+    .item--deg {display: none }
+    .item--ex {display: none }
+    .item--ul {display: none }
+    .item--x3 {display: none } 
     .item--root {order:6} 
     .item--10x {order:7} 
     .item--log {order:8} 
@@ -391,4 +391,37 @@ calculator__mathCache__tab--content {
     .item--zero {order:33} 
     .item--dot {order:34} 
     .item--eql {order:35} 
+}
+/*--------------------Popup-----------------------------*/
+.popup{
+    display:none;
+    height:20vh;;
+    position:absolute;
+    text-align:center;
+    top:83.5vh;
+    left: 15vw;
+    width:80vh;
+}
+.popup > div {
+    background-color: #fff;
+    box-shadow: -2px 2px 20px #333332;
+    display: block;
+    position: relative;
+    height: auto;
+    max-width: 90vw;
+    min-height: 10vh;
+    vertical-align: middle;
+    border-radius: 3em;
+    padding: 1vw 5%;
+}
+.git{
+    font-size: 2em;
+
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    opacity: .8;
 }

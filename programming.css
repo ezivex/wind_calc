@@ -16,13 +16,13 @@ body {
 }
 
 .container {
-    height: 140vh;
+    height: 105vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr, 12;
     grid-template-rows: auto;
     grid-template-areas:
-        "as cl cl cl cl cl cl ch ch ch ch ch"
+        "as cl cl cl cl cl cl cl cl cl cl cl"
 }
 
 /*-------------------------------navigation--------------------------*/
@@ -78,36 +78,32 @@ body {
 /*----------------------------calculator-----------------------------*/
 .calculator {
     grid-area: cl;
-    margin-left: 1vw;
-}
-
-.calculator__mathCache {
-    grid-area: ch;
-    margin-left: 1vw;
+    margin-left: 5vw;
+    margin-right: 6vw;
 }
 
 .calculator__buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1vh;
 }
 
 .calculator__show__input--resultDesktop {
     width: 100%;
-    height: 16vh;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    height: 8vh;
+    margin-top: 3vh;
+    
     text-align: right;
-    font-size: 5em;
+    font-size: 3em;
     background-color: hsla(0, 0%, 100%, 0.04);
     border: none;
 }
 
 
 .calculator__button--mathItem {
-    height: 10vh;
-    font-size: 1.4em;
-    line-height: 10vh;
+    height: 7vh;
+    font-size: 1.3em;
+    line-height: 7vh;
     text-align: center;
     background-color: hsla(0, 0%, 97%, 0.47);
 }
@@ -125,11 +121,11 @@ body {
     box-shadow: 2px -1px 12px -3px hsla(0, 0%, 0%, 0.75);
 }
 
-.calculator__button--mathItem--basicMathAction:hover, .calculator__button--mathItem--basicMathAction:active {
+.calculator__button--mathItem--basicMathAction:hover,
+.calculator__button--mathItem--basicMathAction:focus,
+.calculator__button--mathItem--basicMathAction:active {
     color: hsl(0, 0%, 100%);
-    background-color: hsl(207, 100%, 42%);
-}
-
+    background-color: hsl(207, 100%, 42%);}
 /*-----------------------------html items----------------------------*/
 #cls {
     display: none;
@@ -176,74 +172,36 @@ ul li:hover {
     display: none;
 }
 
-/*-----------------------------tabs----------------------------*/
-.calculator__mathCache__button--tablink {
-    color: hsl(0, 0%, 100%);
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1.4em;
-    width: 50%;
-    color: #000;
-}
-
-.calculator__mathCache__button--tablink:active {
-    border-bottom: .6vh solid hsl(207, 100%, 42%);
-}
-
-.calculator__mathCache--tab {
-    margin-top: 4vh;
-    width: 38vh;
-
-}
-
-calculator__mathCache__tab--content {
-    width: 30vw;
-    display: none;
-    height: 40vh;
-    margin-top: 1vh;
-
-}
-
-.calculator__mathCache__cache__h,
-.calculator__mathCache__cache__p {
-    margin-top: 1vh;
-    margin-left: 1vh;
-}
-
-.calculator__mathCache__cache--p {
-    text-align: right;
-    width: 20vw;
-    font-size: 1.5em;
-    overflow-y: scroll;
-    height: 65vh;
-    scrollbar-width: none;
-}
-
-.calculator__mathCache__cache__trash {
-    font-size: 2em;
-    position: absolute;
-    left: 96vw;
-    top: 90vh;
-    padding: .4vh;
-}
-
-.calculator__mathCache__cache__trash:hover {
-    cursor: pointer;
-    border: 1px solid hsla(0, 0%, 97%, 0.47);
-    background-color: hsla(0, 2%, 60%, 0.28);
-
-}
-
  .nav__popup--infoMobile{
         display: none;
     }
-
+.btn{
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+    width: 5vw;
+    padding: 1vh;
+    display: inline-block;
+       cursor: pointer;
+}
+.prg{
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+    width: 5vw;
+    padding: 1vh;
+     cursor: pointer;
+}
+.syssw{
+    margin-left: -1vw;
+    display: block;
+}
+.syssw:hover{
+     cursor: pointer;
+    background-color: hsla(0, 1%, 46%, 0.28);
+}
 /*--------------------MOBILE-----------------------------*/
 @media (min-width:320px) and (max-width:961px)  { 
     .container {
-    height: 100vh;
+    height: 140vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr, 2;
@@ -251,13 +209,9 @@ calculator__mathCache__tab--content {
     grid-template-areas:
         "as cl"
 } 
-.calculator__mathCache {
-    display: none;
-}
-
 .calculator__button--mathItem {
     height: 7vh;
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 7vh;
     text-align: center;
     background-color: hsla(0, 0%, 97%, 0.47);
@@ -267,11 +221,13 @@ calculator__mathCache__tab--content {
     margin-right: 4vw;
     margin-left: 4vw;
   
-}  
-    .calculator__button--mathItem--number {
-    background-color: hsl(0, 0%, 100%);
-    font-weight: bold;
-}  
+} 
+    .calculator__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1vh;
+}
+
 
 .nav__button--open {
     position: absolute;
@@ -286,7 +242,7 @@ calculator__mathCache__tab--content {
 .nav__button--close {
     position: absolute;
     top: 1vh;
-    left: 70vw;
+     left: 70vw;
     width: 2vw;
     margin-bottom: 1vh;
     margin-left: 12.4vw;
@@ -303,7 +259,10 @@ calculator__mathCache__tab--content {
     text-align: center;
 }    
   
-    
+.calculator__button--mathItem--number {
+    background-color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}  
 .calculator__show__input--resultOne {
     width: 100%;
     height: 4vh;
@@ -338,9 +297,72 @@ calculator__mathCache__tab--content {
     width: 53vw;
     text-align: center;
     }
-   
+    .fa--marg{
+        margin-right: 7vw;
+    }
+    .item--lsh {order:1;}
+    .item--rsh {order:2;} 
+    .item--or {order:3;} 
+    .item--xor {order:4;} 
+    .item--not {order:5;} 
+    .item--and {order:6;} 
+    .item--arrow {order:7;} 
+    .item--mod {order:8;} 
+    .item--ce {order:9;} 
+    .item--cc {order:10;} 
+    .item--del {order:11;} 
+    .item--divide {order:12;}
+    .item--a {order:13;} 
+    .item--b {order:14;} 
+    .item--sev {order:15;} 
+    .item--eig {order:16;} 
+    .item--nine {order:17;} 
+    .item--mult {order:18;} 
+    .item--c {order:19;} 
+    .item--d {order:20;} 
+    .item--four {order:21;} 
+    .item--fiv {order:22;} 
+    .item--six {order:23;} 
+    .item--minus {order:24;} 
+    .item--e {order:25;} 
+    .item--f {order:26;} 
+    .item--one {order:27;} 
+    .item--two {order:28;} 
+    .item--three {order:29;} 
+    .item--plus {order:30;} 
+    .item--40 {order:31;} 
+    .item--41 {order:32;} 
+     .item--plsmin {order:33; } 
+    .item--zero {order:34;} 
+    .item--dot {order:35;} 
+    .item--eql {order:36;} 
+    
+    .btn{
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+    width: 5vw;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 2vh;
 }
+.prg{
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border: none;
+    width: 5vw;
+     cursor: pointer;
+}
+.syssw{
+    margin-left: -1vw;
+    display: block;
+    height: 4vh;
+    line-height: 3vh;
 
+}
+.syssw:hover{
+     cursor: pointer;
+    background-color: hsla(0, 1%, 46%, 0.28);
+}
+}
 /*--------------------Popup-----------------------------*/
 .popup{
     display:none;
