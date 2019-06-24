@@ -10,4 +10,4 @@ Using:
 Cooperate with:
 Admaron
 
-2019 Created.
+2019 Created. @ Łukasz Strzałek
